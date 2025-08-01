@@ -41,8 +41,8 @@ Designed with **modern UI animations** like moving gradient backgrounds, glowing
 
 1️⃣ **Clone the Repository**
 
-**git clone https://github.com/kirankuma274/AI-emotion-music-app.git**
-**cd emotion-music-app**
+- **git clone https://github.com/kirankuma274/AI-emotion-music-app.git**
+- **cd emotion-music-app**
 
 ## install dependencies
    npm install
