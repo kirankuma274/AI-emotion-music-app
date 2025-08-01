@@ -1,24 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import CameraFeed from "./components/CameraFeed";
+import MusicPlayer from "./components/MusicPlayer";
+import { Box, Typography } from "@mui/material";
+import "./App.css";
 
 function App() {
+  const [emotion, setEmotion] = useState("");
+
+  const emotionColors = {
+    happy: "#FFD700",
+    sad: "#1E90FF",
+    angry: "#FF4500",
+    surprised: "#8A2BE2",
+    neutral: "#A9A9A9"
+  };
+
+  const borderColor = emotionColors[emotion] || "#ffffff";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box
+      className="animated-bg"
+      sx={{
+        textAlign: "center",
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "20px"
+      }}
+    >
+      <Typography variant="h3" sx={{ color: "white", fontWeight: "bold", mb: 3 }}>
+        🎶 AI Emotion Music Player
+      </Typography>
+
+      <div className="glass-panel camera-border" style={{ borderColor }}>
+        <CameraFeed onEmotionDetected={setEmotion} />
+      </div>
+
+      {emotion && (
+        <Typography
+          variant="h4"
+          className="fade-in"
+          sx={{
+            mt: 3,
+            color: borderColor,
+            fontWeight: "bold",
+            textShadow: `0 0 10px ${borderColor}`
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Detected Emotion: {emotion}
+        </Typography>
+      )}
+
+      <div className="glass-panel">
+        <MusicPlayer emotion={emotion} />
+      </div>
+    </Box>
   );
 }
 
