@@ -5,6 +5,10 @@ Designed with **modern UI animations** like moving gradient backgrounds, glowing
 
 ---
 
+**project Live at:** https://ai-emotion-music.netlify.app/
+
+---
+
 ## 🚀 Features
 
 ### 🎯 AI Emotion Detection
@@ -18,6 +22,7 @@ Designed with **modern UI animations** like moving gradient backgrounds, glowing
 - **Smooth Fade-in Emotion Text** for visual feedback
 
 ### 🎵 Music Playback
+
 - Plays emotion-based songs
 - Emotion color theme syncs with UI elements
 
@@ -35,11 +40,12 @@ Designed with **modern UI animations** like moving gradient backgrounds, glowing
 ## 📦 Installation
 
 1️⃣ **Clone the Repository**
-bash
-git clone https://github.com/yourusername/emotion-music-app.git
-cd emotion-music-app
+
+**git clone https://github.com/kirankuma274/AI-emotion-music-app.git**
+**cd emotion-music-app**
 
 ## install dependencies
    npm install
 
 ## start the app
+   npm start
